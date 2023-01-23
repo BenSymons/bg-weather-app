@@ -25,6 +25,8 @@
       "react"
   ],
   "rules": {
+    "no-unused-vars": "off",
+    "react/react-in-jsx-scope": "off",
     "quotes": [0],
     "react/jsx-props-no-spreading": [0],
     "react/jsx-filename-extension": [
