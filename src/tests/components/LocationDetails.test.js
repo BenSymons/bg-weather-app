@@ -4,7 +4,7 @@ import LocationDetails from "../../components/LocationDetails";
 import ForecastSummary from "../../components/ForecastSummary";
 
 describe("LocationDetails", () => {
-  it("renders correct city and location props", () => {
+  test("renders correct city and location props", () => {
     const { getByText } = render(
       <LocationDetails city="Manchester" country="UK" />
     );

@@ -1,17 +1,28 @@
-import React from "react";
+import React, { useState } from "react";
 import "../styles/App.css";
 import PropTypes from "prop-types";
 import LocationDetails from "./LocationDetails";
-import ForecastSummary from "./ForecastSummary";
 import ForecastSummaries from "./ForecastSummaries";
-import forecast from "../data/forecast.json";
+import ForecastDetails from "./ForecastDetails";
 
 function App(props) {
   const { location, forecasts } = props;
+  const [selectedDate, setSelectedDate] = useState(forecasts[0].date);
+  const selectedForecast = forecasts.find(
+    (forecast) => forecast.date === selectedDate
+  );
+  const handleForecastSelect = (date) => {
+    setSelectedDate(date);
+  };
+
   return (
     <div className="App">
       <LocationDetails city={location.city} country={location.country} />
-      <ForecastSummaries forecasts={forecasts} />
+      <ForecastSummaries
+        forecasts={forecasts}
+        onForecastSelect={handleForecastSelect}
+      />
+      <ForecastDetails forecast={selectedForecast} />
     </div>
   );
 }
@@ -21,6 +32,7 @@ App.propTypes = {
     PropTypes.shape({
       date: PropTypes.number,
       description: PropTypes.string,
+      humidity: PropTypes.number,
       icon: PropTypes.string,
       temperature: PropTypes.shape({
         max: PropTypes.number,
