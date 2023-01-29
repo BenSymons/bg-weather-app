@@ -31,7 +31,7 @@ exports[`Forecast Summaries renders correctly 1`] = `
       <div
         class="forecast-summary__description"
       >
-        Stub description
+        Stub description1
       </div>
       <div
         class="moreDetails-button"
@@ -57,7 +57,7 @@ exports[`Forecast Summaries renders correctly 1`] = `
         data-testid="forecast-icon"
       >
         <i
-          class="wi wi-day-sunny"
+          class="wi wi-day-snow"
           name="owm"
         />
       </div>

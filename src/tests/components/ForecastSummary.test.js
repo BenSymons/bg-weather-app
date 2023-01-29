@@ -40,7 +40,6 @@ describe("ForecastSummary", () => {
 
     expect(getByText("Thu Jan 01 1970")).toHaveClass("forecast-summary__date");
     expect(getByText("Stub description")).toHaveClass("forecast-summary__description");
-    
     expect(getByText("22°C")).toHaveClass("forecast-summary__temperature");
   });
 });

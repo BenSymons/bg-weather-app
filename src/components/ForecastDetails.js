@@ -29,7 +29,7 @@ ForecastDetails.propTypes = {
     date: PropTypes.number,
     description: PropTypes.string,
     humidity: PropTypes.number,
-    icon: PropTypes.string,
+    icon: PropTypes.number,
     temperature: PropTypes.shape({
       max: PropTypes.number,
       min: PropTypes.number,
