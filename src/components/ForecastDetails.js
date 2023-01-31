@@ -7,19 +7,21 @@ function ForecastDetails({ forecast }) {
   const windDirection = forecast.wind.direction.toUpperCase();
   return (
     <div className="forecast-details">
-      <div className="forecast-details__date">{formattedDate}</div>
-      <div className="forecast-details__temp-max">
-        Max: {forecast.temperature.max}&deg;C
-      </div>
-      <div className="forecast-details__temp-min">
-        Min: {forecast.temperature.min}&deg;C
-      </div>
-      <div className="forecast-details__humidity">
-        Humidity: {forecast.humidity}%
-      </div>
-      <div className="forecast-details__wind-speed">
-        Wind: {forecast.wind.speed} {windDirection}
-      </div>
+      <ul>
+        <li className="forecast-details__date">{formattedDate}</li>
+        <li className="forecast-details__temp-max">
+          Max: {forecast.temperature.max}&deg;C
+        </li>
+        <li className="forecast-details__temp-min">
+          Min: {forecast.temperature.min}&deg;C
+        </li>
+        <li className="forecast-details__humidity">
+          Humidity: {forecast.humidity}%
+        </li>
+        <li className="forecast-details__wind-speed">
+          Wind: {forecast.wind.speed} {windDirection}
+        </li>
+      </ul>
     </div>
   );
 }

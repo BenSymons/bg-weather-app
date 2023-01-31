@@ -23,7 +23,7 @@ const getForecast = (
       setErrorMessage("");
     })
     .catch((error) => {
-      const { status } = error.response;
+      const { status } = error.response || {};
       if (status === 404) {
         setErrorMessage(`${searchText}? Never heard of it!`);
         console.error("Location invalid", error);

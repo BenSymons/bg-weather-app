@@ -2,5 +2,5 @@ import { render, screen } from "@testing-library/react";
 import App from "../../components/App";
 
 describe("App", () => {
-  xit("App renders correctly", () => {});
+  it("App renders correctly", () => {});
 });

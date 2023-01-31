@@ -20,6 +20,10 @@ function App() {
     (forecast) => forecast.date === selectedDate
   );
 
+  useEffect(() => {
+    getForecast(setSelectedDate, setForecasts, setLocation);
+  }, []);
+
   const handleCitySearch = () => {
     getForecast(
       setSelectedDate,
@@ -33,10 +37,6 @@ function App() {
   const handleForecastSelect = (date) => {
     setSelectedDate(date);
   };
-
-  useEffect(() => {
-    getForecast(setSelectedDate, setForecasts, setLocation);
-  }, []);
 
   return (
     <div className="App">
@@ -57,6 +57,7 @@ function App() {
             forecasts={forecasts}
             onForecastSelect={handleForecastSelect}
           />
+          <br />
           {selectedForecast && <ForecastDetails forecast={selectedForecast} />}
         </>
       )}

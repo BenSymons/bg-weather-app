@@ -37,10 +37,13 @@ describe("Forecast Summaries", () => {
     expect(asFragment()).toMatchSnapshot();
   });
 
-  xtest("renders correct number of ForecastSummary instances", () => {
+  test("renders correct number of ForecastSummary instances", () => {
     console.log(validProps)
     const { getAllByTestId } = render(
-      <ForecastSummaries forecasts={validProps} />
+      <ForecastSummaries
+        forecasts={validProps.forecasts}
+        onForecastSelect={validProps.onForecastSelect}
+      />
     );
 
     expect(getAllByTestId("forecast-summary")).toHaveLength(2);
