@@ -1,6 +1,8 @@
 # Getting Started with Weather App
 
+![screenshot](https://user-images.githubusercontent.com/78327580/216200585-23ffc01f-a1bc-44b5-af56-6202890337eb.png)
 
+The app is functional but needs some more styling.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
