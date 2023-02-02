@@ -1,23 +1,6 @@
 .App {
-  margin: 20px
-}
-
-.forecast-summaries {
-  display: flex;
-  justify-content: center;
-}
-
-.forecast-summary {
-  padding: 32px;
-  background-color: white;
-  border-style: solid;
-  border-radius: 4px;
-  border-width: 2px;
-  border-color: grey;
-
-}
-
-.forecast-details {
-  display: flex;
-  justify-content: center;
+  align-content: center;
+  margin: auto;
+  width: 60%;
+  background-image: url("/public/images/bg/08.jpg");
 }

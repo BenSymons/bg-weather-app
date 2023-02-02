@@ -1,3 +1,11 @@
 .forecast-summary {
+  text-align: center;
+  padding: 32px;
+  background-color: whitesmoke;
+  border-style: solid;
+  border-radius: 4px;
+  border-width: 2px;
+  border-color: grey;
+  font-size: 24px;
 
 }
